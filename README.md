@@ -1,7 +1,7 @@
 # Database Normalization Task
 
 ## Optimizing a Retail Network Inventory Management Database
-You are working with an unstructured dataset for a retail network that sells products from multiple manufacturers in various stores. Different stores can sell identical products, but each store specializes in selling certain categories of products. Each product corresponds to a category, and the data is currently in **UNF (Unnormalized Form)**, violating normalization principles. Below is the raw data with product, store, category, price, and quantity information:
+You are working with an unstructured dataset for a retail network that sells products from multiple manufacturers in various stores. Different stores can sell identical products, but each store specializes in selling certain categories of products. Each product can belong to multiple categories, and the data is currently in **UNF (Unnormalized Form)**, violating normalization principles. Below is the raw data with product, store, category, price, and quantity information:
 
 |ProductInfo|Category|StoreAddress|StoreCity|StoreZipCode|Quantity|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -11,13 +11,12 @@ Product: Smartphone, Manufacturer: TechCo, Price: 800|Smartphones|456 Oak Rd|Chi
 Product: Smartphone, Manufacturer: GadgetWorks, Price: 850|Smartphones|456 Oak Rd|Chicago|60601|12|
 Product: Laptop, Manufacturer: TechCo, Price: 1200|Computers|456 Oak Rd|Chicago|60601|7|
 Product: Laptop, Manufacturer: GadgetWorks, Price: 1150|Computers|456 Oak Rd|Chicago|60601|10|
-Product: Tablet, Manufacturer: GadgetWorks, Price: 500|Computers|123 Main St|New York|10001|15|
-Product: Tablet, Manufacturer: TechCo, Price: 450|Computers|123 Main St|New York|10001|20|
+Product: Tablet, Manufacturer: GadgetWorks, Price: 500|Electronics, Computers|123 Main St|New York|10001|15|
+Product: Tablet, Manufacturer: TechCo, Price: 450|Electronics, Computers|123 Main St|New York|10001|20|
 Product: Washing Machine, Manufacturer: HomeTech, Price: 400|Home Appliances|789 Pine Ave|Los Angeles|90001|25|
 Product: Washing Machine, Manufacturer: CleanMaster, Price: 380|Home Appliances|789 Pine Ave|Los Angeles|90001|30|
-Product: Headphones, Manufacturer: AudioTech, Price: 200|Electronics|456 Oak Rd|Chicago|60601|50|
-Product: Headphones, Manufacturer: TechCo, Price: 220|Electronics|456 Oak Rd|Chicago|60601|40|
-|
+Product: Headphones, Manufacturer: AudioTech, Price: 200|Electronics, Audio|456 Oak Rd|Chicago|60601|50|
+Product: Headphones, Manufacturer: TechCo, Price: 220|Electronics, Audio|456 Oak Rd|Chicago|60601|40|
 
 ## Task:
 Design a normalized database schema to improve efficiency, eliminate redundancy, and ensure data integrity. The schema should satisfy **at least 1NF, 2NF, 3NF, and 4NF** normal forms.
@@ -33,3 +32,7 @@ Design a normalized database schema to improve efficiency, eliminate redundancy,
 - **2NF:** Ensure that all non-key attributes are fully dependent on the primary key.
 - **3NF:** Remove transitive dependencies.
 - **4NF:** Resolve multi-valued dependencies
+
+# Solution
+
+## Diagram of the Normalized Database
