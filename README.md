@@ -31,8 +31,10 @@ Design a normalized database schema to improve efficiency, eliminate redundancy,
 - **1NF Violation:** The **ProductInfo** column is not normalized as it combines multiple attributes in a single column, leading to redundancy.
 - **2NF:** Ensure that all non-key attributes are fully dependent on the primary key.
 - **3NF:** Remove transitive dependencies.
-- **4NF:** Resolve multi-valued dependencies
+- **4NF:** Resolve multi-valued dependencies (e.g., products, stores, categories,)
 
 # Solution
 
-## Diagram of the Normalized Database
+## ER Diagram of the Normalized Database
+[ER Diagram online (dbdiagram.io)](https://dbdiagram.io/d/67b0a222263d6cf9a043af3a)
+![ER Diagram](ER_diagram.png)
