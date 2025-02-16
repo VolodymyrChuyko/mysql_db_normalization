@@ -38,3 +38,6 @@ Design a normalized database schema to improve efficiency, eliminate redundancy,
 ## ER Diagram of the Normalized Database
 [ER Diagram online (dbdiagram.io)](https://dbdiagram.io/d/67b0a222263d6cf9a043af3a)
 ![ER Diagram](ER_diagram.png)
+
+## SQL
+[SQL](./sql/)
